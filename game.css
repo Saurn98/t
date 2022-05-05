@@ -1,0 +1,350 @@
+.glow-on-hover {
+    width: 100px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
+
+body{
+	background-image: url("https://images.pexels.com/photos/891252/pexels-photo-891252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-position: center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+	min-height:100vh;
+	font-family: 'Noto Sans', sans-serif;
+}
+.text-center{
+	color:#fff;	
+	text-transform:uppercase;
+    font-size: 23px;
+    margin: -50px 0 80px 0;
+    display: block;
+    text-align: center;
+}
+.box{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.89);
+	border-radius:3px;
+	padding:70px 100px;
+}
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+	transition: all 0.5s ease-in-;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+.btn{
+	color:#fff;
+	background-color:#e74c3c;
+	outline: none;
+    border: 0;
+    color: #fff;
+	padding:10px 20px;
+	text-transform:uppercase;
+	margin-top:50px;
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+}
+/*.btn:after{
+	content:"";
+	position:absolute;
+	background:rgba(0,0,0,0.50);
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+}*/
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	
+}
+div.container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	margin-top: 30px;
+	padding: 21px;
+	border-radius: 4px;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+div.container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	margin-top: 30px;
+
+	padding: 21px;
+	border-radius: 4px;
+}
+h4.title {
+	text-align: center;
+	margin-bottom: 45px;
+}
+:root {
+	--omrs-color-ink-lowest-contrast: rgba(47, 60, 85, 0.18);
+	--omrs-color-ink-low-contrast: rgba(60, 60, 67, 0.3);
+	--omrs-color-ink-medium-contrast: rgba(19, 19, 21, 0.6);
+	--omrs-color-interaction: #1e4bd1;
+	--omrs-color-interaction-minus-two: rgba(73, 133, 224, 0.12);
+	--omrs-color-danger: #b50706;
+	--omrs-color-bg-low-contrast: #eff1f2;
+	--omrs-color-ink-high-contrast: #121212;
+	--omrs-color-bg-high-contrast: #ffffff;
+	
+}
+/** END: Non Openmrs CSS **/
+div.omrs-input-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 20.4375rem;
+}
+
+/* Input*/
+.omrs-input-underlined > input,
+.omrs-input-filled > input {
+	border: none;
+	border-bottom: 0.125rem solid var(--omrs-color-ink-medium-contrast);
+	width: 100%;
+	height: 2rem;
+	font-size: 1.0625rem;
+	padding-left: 0.875rem;
+	line-height: 147.6%;
+	padding-top: 0.825rem;
+	padding-bottom: 0.5rem;
+}
+
+.omrs-input-underlined > input:focus,
+.omrs-input-filled > input:focus {
+	outline: none;
+}
+
+.omrs-input-underlined > .omrs-input-label,
+.omrs-input-filled > .omrs-input-label {
+	position: absolute;
+	top: 0.9375rem;
+	left: 0.875rem;
+	line-height: 147.6%;
+	color: var(--omrs-color-ink-medium-contrast);
+	transition: top .2s;
+}
+
+.omrs-input-underlined > svg,
+.omrs-input-filled > svg {
+	position: absolute;
+	top: 0.9375rem;
+	right: 0.875rem;
+	fill: var(--omrs-color-ink-medium-contrast);
+}
+
+.omrs-input-underlined > .omrs-input-helper,
+.omrs-input-filled > .omrs-input-helper {
+	font-size: 0.9375rem;
+	color: var(--omrs-color-ink-medium-contrast);
+	letter-spacing: 0.0275rem;
+	margin: 0.125rem 0.875rem;
+}
+
+.omrs-input-underlined > input:hover,
+.omrs-input-filled > input:hover {
+	background: var(--omrs-color-interaction-minus-two);
+	border-color: var(--omrs-color-ink-high-contrast);
+}
+
+.omrs-input-underlined > input:focus + .omrs-input-label,
+.omrs-input-underlined > input:valid + .omrs-input-label,
+.omrs-input-filled > input:focus + .omrs-input-label,
+.omrs-input-filled > input:valid + .omrs-input-label {
+	top: 0;
+	font-size: 0.9375rem;
+	margin-bottom: 32px;;
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus + .omrs-input-label,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus + .omrs-input-label {
+	color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus {
+	border-color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus ~ svg,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus ~ svg {
+	fill: var(--omrs-color-ink-high-contrast);
+}
+
+/** DISABLED **/
+
+.omrs-input-underlined > input:disabled {
+	background: var(--omrs-color-bg-low-contrast);
+	cursor: not-allowed;
+}
+
+.omrs-input-underlined > input:disabled + .omrs-input-label,
+.omrs-input-underlined > input:disabled ~ .omrs-input-helper{
+	color: var(--omrs-color-ink-low-contrast);
+}
+
+.omrs-input-underlined > input:disabled ~ svg {
+	fill: var(--omrs-color-ink-low-contrast);
+}
+
+
+/** DANGER **/
+
+.omrs-input-underlined.omrs-input-danger > .omrs-input-label, .omrs-input-underlined.omrs-input-danger > .omrs-input-helper,
+.omrs-input-filled.omrs-input-danger > .omrs-input-label, .omrs-input-filled.omrs-input-danger > .omrs-input-helper{
+	color: var(--omrs-color-danger);
+}
+
+.omrs-input-danger > svg {
+	fill: var(--omrs-color-danger);
+}
+
+.omrs-input-danger > input {
+	border-color: var(--omrs-color-danger);
+}
+
+.omrs-input-underlined > input {
+	background: var(--omrs-color-bg-high-contrast);
+}
+.omrs-input-filled > input {
+	background: var(--omrs-color-bg-low-contrast);
+}
+.items
+{
+    background-color: yellow;
+    width: 130px;
+    height: fit-content;
+    cursor: pointer;
+}
+#utem
+{
+    display: none;
+    cursor: pointer;
+}
+
+.items:hover 
+{
+    cursor: pointer;
+    background-color: aqua;
+}
+/* (A) LAYOUT CONTAINER AS A TABLE */
+.wrap-table { display: table; }
+ 
+/* (B) "CONVERT" ITEMS TO TABLE CELLS */
+.wrap-table > * { display: table-cell; }
+ 
+/* (C) NOT IMPORTANT - COSMETICS */
+.wrap-table > * { border: 1px solid blue; }
+.wrap-table img { width: 100%; }
+.btn-1 {
+    transition: all 0.3s ease;
+  }
+  .btn-1:hover {
+     box-shadow:
+     -7px -7px 20px 0px black,
+     -4px -4px 5px 0px black,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+  }
+  
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid #000;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    background-color: white;
+  }
+
+
+

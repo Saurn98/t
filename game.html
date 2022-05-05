@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main page</title>
+        <link rel="stylesheet" href="game.css">
+    </head>
+    <body onload="load()" id="bodys" style="background: #9FE2BF;">
+        <h5 style="font-size: 20px;" id="p1-score"></h5>
+        <h5 style="font-size: 20px;" id="p2-score"></h5>
+        <center>
+            <h1 style="color: #00008B;">The Math Quiz Game!</h1>
+            <br>
+            <h2 id="question_turn" class="turn" style="color: red;"></h2>
+            <br>
+            <h2 id="answer_turn" class="turn" style="color: red;"></h2>
+            <br>
+            <br>
+            <br>
+        <div id="output" style="background-color: white; width: 450px; height: 200px;border: 5px solid #FFFF00;display: block;
+            text-align: center;">
+            <h1 id="question">6 x 4</h1>
+            <br>
+            <label for="answer_input">Answer : </label>
+            <input id="answer_input">
+            <br>
+            <br>
+            <br>
+            <button class="glow-on-hover" type="button" onclick="check()">Check</button>
+        </div>
+        <br>
+       
+        <div id="numDiv">
+        <div class="container">
+            <div>
+                <form>
+                    <div class="omrs-input-group">
+                        <label class="omrs-input-underlined">
+                          <input id="one_num" required>
+                          <span class="omrs-input-label">First Number</span>
+            </div></form></div></div>
+
+            <!--<div id="userless" class="wrap-grid">-->
+            <!-- <button id="dbtn" onclick="dk()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="width: 10px; height: 10px;" src="drepdown.png"></button>-->
+
+           
+          
+            <button id="dbtn" class="wrap-grid dl" onclick="dk()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="incu" class="dl">+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="width: 10px; height: 10px;" src="drepdown.png"></button>
+
+        
+            <div class="item" id="utem">
+            <div onclick="plusI()" class="items">
+            <a class="dropdown item" onclick="plusI()">+</a>
+            <br></div>
+            <div onclick="substractI()" class="items">
+            <a class="dropdown item" onclick="substractI()">-</a>
+            <br></div>
+            <div  onclick="multiplyI()" class="items">
+            <a class="dropdown item" onclick="multiplyI()">×</a>
+            <br></div>
+            <div onclick="divideI()" class="items">
+            <a class="dropdown item" onclick="divideI()">÷</a></div>
+           </div>
+            
+            <div class="container">
+                <div>
+                    <form>
+                        <div class="omrs-input-group">
+                            <label class="omrs-input-underlined">
+                              <input id="two_num" required>
+                              <span class="omrs-input-label">Second Number</span>
+                </div>
+          </form>
+          </div>
+            </div></form>
+      
+        <button class="custom-btn btn-1" id="ob" style="display: block"onclick="submitplus()">Submit</button>
+        <button class="custom-btn btn-1" id="tb" style="display:none" onclick="submitsubstract()">Submit</button>
+        <button style="display: none;" id="thb" class="custom-btn btn-1" onclick="submitmultiply()">Submit</button>
+        <button class="custom-btn btn-1" id="fb" style="display: none;" onclick="submitdivide()">Submit</button></div>
+        </center>
+<!--<script src="game.js"></script>-->
+    </body>
+</html>
